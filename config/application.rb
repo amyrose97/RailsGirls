@@ -10,6 +10,8 @@ module Railgirls
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.hosts << "railsgirls-production-amy-rose-x-000.up.railway.app"
+
 
     # Configuration for the application, engines, and railties goes here.
     #
