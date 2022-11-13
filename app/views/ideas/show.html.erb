@@ -2,14 +2,6 @@
 
 <%= render @idea %>
 <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
-
-
-<div>
-  <%= link_to "Edit this idea", edit_idea_path(@idea) %> |
-  <%= link_to "Back to ideas", ideas_path %>
-
-  <%= button_to "Destroy this idea", @idea, method: :delete %>
-</div>
 <h3>Comments</h3>
 <% @comments.each do |comment| %>
   <div>
@@ -20,3 +12,11 @@
   </div>
 <% end %>
 <%= render partial: 'comments/form', locals: { comment: @comment } %>
+
+
+<div>
+  <%= link_to "Edit this idea", edit_idea_path(@idea) %> |
+  <%= link_to "Back to ideas", ideas_path %>
+
+  <%= button_to "Destroy this idea", @idea, method: :delete %>
+</div>
